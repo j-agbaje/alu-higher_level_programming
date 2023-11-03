@@ -25,7 +25,6 @@ def sub(a, b):
     return (a - b)
 
 
-
 def mul(a, b):
     """My multiplication function
 
@@ -50,9 +49,3 @@ def div(a, b):
         The return value. a / b
     """
     return int(a / b)
-
-guillaume@ubuntu:~/$ ./1-calculation.py
-10 + 5 = 15
-10 - 5 = 5
-10 * 5 = 50
-10 / 5 = 2
