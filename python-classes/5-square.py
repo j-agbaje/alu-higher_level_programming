@@ -1,34 +1,68 @@
 #!/usr/bin/python3
+""" Module Sqaure """
+
+
 class Square:
-    """Defines a square"""
+    """ Square class defined by geometric shap
+        Attributes:
+            size (int): Size of square
+    """
     def __init__(self, size=0):
-        """Initialises the data"""
-        self.size = size
+        """initializes the square
+        Args:
+            size (int): size of a side of the square
+        Returns:
+            None
+        """
+        self.__size = size
 
     def area(self):
-        """Returns current square area"""
-        return self.__size**2
+        """
+        set square square area
+        Return:
+            the current square area (int)
+        """
+        return self.__size ** 2
 
     @property
     def size(self):
-        """Getter method"""
+        """
+        getter of size
+        Return:
+            Size of square
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Setter method"""
-        if type(value) != int:
+        """
+        Setter of size
+        Args:
+            size (int): size of a side of the square
+        Raises
+            TypeError: if size is not int
+            ValueError: size less than 0
+        Returns:
+            None
+        """
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+        elif value < 0:
+                raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
 
     def my_print(self):
-        """Prints the square"""
         if self.__size == 0:
             print()
         else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print('#', end='')
+            counter = self.__size
+            startsize = self.__size
+            coun_num = 0
+            while self.__size > coun_num:
+                while counter > 0:
+                    print("#", end="")
+                    counter -= 1
                 print()
+                counter = startsize
+                self.__size -= 1
