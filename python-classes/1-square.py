@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
- CODE CONTAINS NO MODULES
+THIS CODE CONTAINS NO MODULES
 """
 
 
