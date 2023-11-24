@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
-THIS CODE CONTAINS NO MODULES
+DOCUMENTATION FOR MODULES IN HERE WILL DO THE TRICK
 """
 
 
-class Square():
+class Square:
     """
-    CLASS IS A SQUARE CLASS AND IS EMPTY
+    CLASS CREATES A PRIVATE SIZE INSTANCE VARIABLE AND ASSIGNS IT
     """
+    def __init__(self, size):
+        self._Square__size = size
